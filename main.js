@@ -4,19 +4,17 @@ function calculate(input) {
         sub: '-',
         div: '/',
         mlt: '*',
-        mod: '%',
-        exp: '^'
     };
     f.ooo = [
         [
-            [f.mlt],[f.div],[f.mod],[f.exp]
+            [f.mlt],[f.div]
         ],
         [
             [f.add],[f.sub]
         ]
     ];
   
-    input = input.replace(/[^0-9%^*\/()\-+.]/g, '');
+    input = input.replace(/[^0-9*\/()\-+.]/g, '');
   
     var output;
     for (var i = 0, n = f.ooo.length; i < n; i++) {
@@ -46,12 +44,6 @@ function calculate(input) {
                 break;
             case f.mlt:
                 return a * b;
-                break;
-            case f.mod:
-                return a % b;
-                break;
-            case f.exp:
-                return Math.pow(a, b);
                 break;
             default:
                 null;
