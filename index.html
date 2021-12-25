@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
-    <style>
-        label {
-            display: inline-block;
-            width: 4em;
-        }
-    </style>
+    <title>Calculator</title>
 </head>
 <body>
     <div>
         <label for="input">Equation: </label>
         <input type="text" id="input" />
-        <input type="button" 
-               value="calculate" 
-               onclick="getElementById('result').value = calculate(getElementById('input').value)" />
-      </div>
-      
-      <div>
+        <input type="button"  value="calculate" onclick="getElementById('result').value = calculate(getElementById('input').value)" />
+    </div>
+    <div>
         <label for="result">Result: </label>
         <input type="text" id="result" />
-      </div>
-      <script src="main.js"></script>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
